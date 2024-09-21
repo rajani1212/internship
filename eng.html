@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+        .collapsible {
+        background:linear-gradient(188deg, rgb(0, 48, 143) 0.00%, rgb(0, 255, 255) 100.00%);
+  color: white;
+  cursor: pointer;
+  padding: 16px 25px;
+  width: 100%;
+  text-align: center;
+  outline:none;
+  font-family: century;
+  font-size: 17px;
+}
+.active, .collapsible:hover {
+  background: linear-gradient(164deg, rgb(253, 54, 133) 0.00%, rgb(254, 207, 215) 75.54%);
+  color: black;
+}
+
+.content {
+  padding: 0;
+  display: none;
+  overflow: hidden;
+  border: 0.1px;
+  border-color: black;
+  
+}
+.c{
+  background: linear-gradient(132deg, rgb(73, 255, 41) 39.18%, rgb(19, 125, 0) 100.00%);
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  outline:none;
+  font-size: 15px;
+}
+.active ,.c:hover{
+  background:linear-gradient(188deg, rgb(0, 48, 143) 0.00%, rgb(0, 255, 255) 100.00%);
+    color: white;
+}
+        .sidenav
+        {
+            height: 100%;
+            font-size: 17.3px;
+            
+        }
+
+        .sidenav .aa {
+            padding: 14.7px 25px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+            border: 1px solid black;
+            background:linear-gradient(188deg, rgb(0, 48, 143) 0.00%, rgb(0, 255, 255) 100.00%);
+        }
+
+        .sidenav .aa:hover {
+          background: linear-gradient(164deg, rgb(253, 54, 133) 0.00%, rgb(254, 207, 215) 75.54%);
+          color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+       <div class="sidenav" >
+        <a href="Def.html" target="engfr2" class="aa"><center>Definition of Product Engineering</center>
+         <a href="Benefits.html" target="engfr2" class="aa"><center>Benefits of product Engineering</center></a>
+        <button type="button" class="collapsible">Phases of product Engineering</button>
+            <div class="content">
+                <a href="Phases.html" target="engfr2"><button type="button" class="c" >Ideation and Conceptualization</button></a>
+                <a href="req.html" target="engfr2"><button type="button" class="c">Requirement Analysis</button></a>
+                <a href="dev.html" target="engfr2"><button type="button" class="c">Product Design and Development </button></a>
+                <a href="testfr.html" target="engfr2"><button type="button" class="c">Product Testing</button></a>
+                <a href="dep.html" target="engfr2"><button type="button" class="c">Product Deployment</button></a>
+                <a href="maintainfr.html" target="engfr2"><button type="button" class="c">Product Maintenance</button></a>
+              </div>
+        <a href="Lifecycle.html" target="engfr2" class="aa"><center>Product LifeCycle</center>
+        <a href="resp.html" target="engfr2" class="aa"><center>Responsibilities of a product engineer</center>
+         <a href="use.html" target="engfr2" class="aa"><center>Use Cases</center>
+         </div>
+     <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>
